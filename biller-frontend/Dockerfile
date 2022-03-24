@@ -8,10 +8,9 @@ COPY ./ /usr/app
 
 RUN yarn build
 
-EXPOSE 4000
 FROM nginx:1.17.8-alpine
 
-COPY --from=build /usr/app/dist /usr/share/nginx/html
+COPY --from=build /usr/app/build /usr/share/nginx/html
 
 RUN rm /etc/nginx/conf.d/default.conf
 

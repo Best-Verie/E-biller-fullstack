@@ -18,7 +18,7 @@ services:
       context: biller-frontend
       dockerfile: Dockerfile
     ports:
-      - '4000:4000'
+      - '80:80'
   db:
     image: bestverie/biller-db:latest
     stdin_open: true 
