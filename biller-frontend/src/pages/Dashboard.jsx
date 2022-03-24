@@ -8,7 +8,7 @@ export function Dashboard(props) {
                 <div className="">
                    </div>
                 <div className="bg-white rounded shadow-lg my-2 p-5 text-sm">
-                    <NavLink to="/balance/logs" className="block p-2">My Transactions</NavLink>
+                    <NavLink to="/balance/logs" className="block p-2">Transactions</NavLink>
                     <NavLink to="/balance/add" className="block p-2 my-2">Buy electricity</NavLink>
                     <NavLink to="/create/meter" className="block p-2" activeClassName="active">Buy a meter</NavLink>
 
