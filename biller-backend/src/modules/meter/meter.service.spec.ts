@@ -4,7 +4,6 @@ import { Repository } from 'typeorm';
 import { Meter } from './entities/meter.entity';
 import { MeterService } from './meter.service';
 
-const testOwner1 = 'Test Meter 1';
 const testMeterNumber = 123456;
 
 const meterArray = [
