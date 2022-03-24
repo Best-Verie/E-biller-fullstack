@@ -3,8 +3,8 @@ version: '3.8'
 services: 
   backend:
     image: bestverie/biller-backend:latest
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
+    stdin_open: true
+    tty: true 
     build: 
       context: biller-backend
       dockerfile: Dockerfile
@@ -12,8 +12,8 @@ services:
       - '3000:3000'
   frontend:
     image: bestverie/biller-frontend:latest
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
+    stdin_open: true 
+    tty: true 
     build: 
       context: biller-frontend
       dockerfile: Dockerfile
@@ -21,8 +21,8 @@ services:
       - '4000:4000'
   db:
     image: bestverie/biller-db:latest
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
+    stdin_open: true 
+    tty: true 
     build:
        context: .
        dockerfile: db.Dockerfile
