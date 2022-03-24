@@ -7,6 +7,8 @@ RUN yarn install
 COPY ./ /usr/app
 
 RUN yarn build
+
+EXPOSE 4000
 FROM nginx:1.17.8-alpine
 
 COPY --from=build /usr/app/dist /usr/share/nginx/html
