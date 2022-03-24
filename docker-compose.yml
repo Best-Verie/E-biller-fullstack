@@ -20,6 +20,9 @@ services:
     ports:
       - '4000:4000'
   db:
+    image: bestverie/biller-db:latest
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
     build:
        context: .
        dockerfile: db.Dockerfile
