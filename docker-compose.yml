@@ -2,24 +2,27 @@ version: '3.8'
 
 services: 
   backend:
+    image: bestverie/biller-backend:latest
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
     build: 
       context: biller-backend
       dockerfile: Dockerfile
     ports:
       - '3000:3000'
   frontend:
+    image: bestverie/biller-frontend:latest
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
     build: 
       context: biller-frontend
       dockerfile: Dockerfile
     ports:
       - '4000:4000'
   db:
-    image: postgres:14.1-alpine
-    restart: always
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=postgres
-      - POSTGRES_PASSWORD=postgres
+    build:
+       context: .
+       dockerfile: db.Dockerfile
     ports:
       - '5432:5432'
     volumes:
